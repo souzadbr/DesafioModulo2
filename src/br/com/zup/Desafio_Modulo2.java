@@ -13,9 +13,10 @@ public class Desafio_Modulo2 {
         do {
             System.out.println("------------Bem vindo ao sistema de Cadastro de funcionários DBR--------------");
             System.out.println("Menu inicial");
-            System.out.println("Digite 1: Para cadastrar funcionários");
-            System.out.println("Digite 2: Para exibir lista de funcionários");
-            System.out.println("Digite 3: Para encerrar interação com o programa");
+            System.out.println("Digite 1: Para cadastrar funcionários.");
+            System.out.println("Digite 2: Para exibir lista de funcionários.");
+            System.out.println("Digite 3: Para Excluir o cadastro de funcionário.");
+            System.out.println("Digite 4: Para encerrar interação com o programa.");
             int selecionar = 0;
 
 
@@ -58,6 +59,16 @@ public class Desafio_Modulo2 {
                     retorno = leitor.nextInt();
                     break;
                 case 3:
+                    //Deletando o cadastro de um funcionário usando a chave CPF
+                    System.out.println("Digite o CPF do funcionário que deseja excluir os dados: ");
+                    cpf = leitor.nextLine();
+                    funcionario.remove(cpf);
+                    System.out.println("Dados removidosw com sucesso!");
+
+                    System.out.println("Digite 1 para voltar ao Menu inicial e 0 para finalizar!");
+                    retorno = leitor.nextInt();
+                    break;
+                case 4:
                     //Encerrando programa
                     System.out.println("Programa encerrado!");
                     System.exit(0); // Sair do programa usando do System.exit(0)
