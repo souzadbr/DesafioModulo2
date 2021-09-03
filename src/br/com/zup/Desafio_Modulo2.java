@@ -39,19 +39,26 @@ public class Desafio_Modulo2 {
                     funcionario.put(cpf, " - Nome: " + nome + "- E-mail: " + email + " - Telefone: " + telefone);
 
 
-                    System.out.println("Digite 1 para voltar ao Menu inicial e 0 para finalizar");
+                    System.out.println("Digite 1 para voltar ao Menu inicial e 0 para finalizar.");
                     retorno = leitor.nextInt();
 
                     break;
 
                 case 2:
                     //Listando funcionário cadastrados
-                    for (String chaveFuncionario : funcionario.keySet()) {
-                        System.out.println(funcionario.get(chaveFuncionario) + " CPF: " + chaveFuncionario);
-                    }
-                    break;
+                   if (funcionario.isEmpty()) {
+                       System.out.print("Lista Vazia, retorne ao Menu e Cadastre um funcionário.");
 
+                   }else {
+                       for (String chaveFuncionario : funcionario.keySet()) {
+                           System.out.println(funcionario.get(chaveFuncionario) + " CPF: " + chaveFuncionario);
+                       }
+                   }
+                    System.out.println("Digite 1 para voltar ao Menu inicial e 0 para finalizar!");
+                    retorno = leitor.nextInt();
+                    break;
                 case 3:
+                    //Encerrando programa
                     System.out.println("Programa encerrado!");
                     System.exit(0);
                     break;
