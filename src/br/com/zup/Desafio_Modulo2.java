@@ -47,11 +47,11 @@ public class Desafio_Modulo2 {
                 case 2:
                     //Listando funcionário cadastrados
                    if (funcionario.isEmpty()) {
-                       System.out.print("Lista Vazia, retorne ao Menu e Cadastre um funcionário.");
+                       System.out.print("Lista Vazia, retorne ao Menu e Cadastre um funcionário."); //Sinaliza lista vazia .isEmpty
 
                    }else {
                        for (String chaveFuncionario : funcionario.keySet()) {
-                           System.out.println(funcionario.get(chaveFuncionario) + " CPF: " + chaveFuncionario);
+                           System.out.println(funcionario.get(chaveFuncionario) + " CPF: " + chaveFuncionario);//Exibi a lista de funcionarios e seus dados cadastrados.
                        }
                    }
                     System.out.println("Digite 1 para voltar ao Menu inicial e 0 para finalizar!");
@@ -60,17 +60,18 @@ public class Desafio_Modulo2 {
                 case 3:
                     //Encerrando programa
                     System.out.println("Programa encerrado!");
-                    System.exit(0);
+                    System.exit(0); // Sair do programa usando do System.exit(0)
                     break;
 
                 default:
+                    //Mostra mensagem caso seja digitado um numero não relacionado ao Menu.
                     System.out.println("Digite um número válido relacionado no menu acima!");
                     break;
             }
 
 
         } while (retorno == 1); //Para retornar ao Menu ou sair caso deseje.
-
+   //retorno igual a 1 portanto, se digitado 1 ele retorna ao menu inicial e se digitado 0 que é != de 1 ele encerra o programa
 
     }
 }
